@@ -1,0 +1,15 @@
+{
+  "sales": {
+    "table_name": "sales",
+    "description": "销售数据表，记录每笔销售交易",
+    "fields": [
+      {"name": "id", "type": "integer", "description": "唯一标识"},
+      {"name": "product", "type": "varchar", "description": "产品名称，如 iPhone 15、MacBook Pro"},
+      {"name": "category", "type": "varchar", "description": "产品类别，如手机、电脑、配件"},
+      {"name": "region", "type": "varchar", "description": "销售区域，如华东、华南、华北"},
+      {"name": "sales_amount", "type": "decimal", "description": "销售额（元）"},
+      {"name": "quantity", "type": "integer", "description": "销售数量"},
+      {"name": "sale_date", "type": "date", "description": "销售日期"}
+    ]
+  }
+}

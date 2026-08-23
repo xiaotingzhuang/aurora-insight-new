@@ -1,0 +1,661 @@
+[
+  {
+    "query": "帮我分析一下销售数据",
+    "answer": "SQL查询成功，返回 15 行数据，但发现异常：数据范围异常：最大值250与最小值1差距过大",
+    "success": true,
+    "metadata": {
+      "session_id": "d621e9df-6bde-4a54-8786-f1a5ddea1383",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "销售",
+      "数据",
+      "查询"
+    ],
+    "keyword_match_rate": 0.6666666666666666,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.6739130434782609,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "哪个产品销售最好",
+    "answer": "SQL查询失败: (psycopg2.errors.UndefinedColumn) column \"product_name\" does not exist\nLINE 1: SELECT product_name, SUM(quantity) AS total_quantity, SUM(sa...\n               ^\n\n[SQL: SELECT product_name, SUM(quantity) AS total_quantity, SUM(sales_amount) AS total_sales \nFROM sales \nGROUP BY product_name \nORDER BY total_sales DESC \nLIMIT 1;]\n(Background on this error at: https://sqlalche.me/e/14/f405)",
+    "success": true,
+    "metadata": {
+      "session_id": "e8dada19-308e-4164-8d50-2204a5c07ff2",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "iPhone",
+      "销售",
+      "最好"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 0.8,
+      "chinese_ratio": 0.010101010101010102,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "哪个产品销售最差",
+    "answer": "SQL查询失败: (psycopg2.errors.UndefinedColumn) column \"product_name\" does not exist\nLINE 1: SELECT product_name, SUM(sales_amount) AS total_sales FROM s...\n               ^\n\n[SQL: SELECT product_name, SUM(sales_amount) AS total_sales FROM sales GROUP BY product_name ORDER BY total_sales ASC LIMIT 1]\n(Background on this error at: https://sqlalche.me/e/14/f405)",
+    "success": true,
+    "metadata": {
+      "session_id": "55e8d2ee-5703-4699-9932-8eba88ab35bb",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "AirPods",
+      "销售",
+      "最差"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 0.8,
+      "chinese_ratio": 0.011204481792717087,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "Q3销售额是多少",
+    "answer": "SQL查询失败: (psycopg2.errors.UndefinedColumn) column \"quarter\" does not exist\nLINE 1: SELECT * FROM sales WHERE \"quarter\" = 'Q3' OR \"quarter\" = 'Q...\n                                  ^\n\n[SQL: SELECT * FROM sales WHERE \"quarter\" = 'Q3' OR \"quarter\" = 'Q4']\n(Background on this error at: https://sqlalche.me/e/14/f405)",
+    "success": true,
+    "metadata": {
+      "session_id": "585e53ca-61d2-4359-8846-0fafdb233634",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "Q3",
+      "销售",
+      "额"
+    ],
+    "keyword_match_rate": 0.3333333333333333,
+    "quality": {
+      "length_score": 0.8,
+      "chinese_ratio": 0.012738853503184714,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "华东地区卖了多少",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "d99b6f13-8479-4da3-84a2-83d7b5076f26",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "华东",
+      "销售",
+      "数据"
+    ],
+    "keyword_match_rate": 0.3333333333333333,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "华南地区卖了多少",
+    "answer": "SQL查询成功，返回 4 行数据，但发现异常：数据范围异常：最大值225与最小值2差距过大",
+    "success": true,
+    "metadata": {
+      "session_id": "502fe23f-8d2b-4b92-bc8b-5fa35487dcf0",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "华南",
+      "销售",
+      "数据"
+    ],
+    "keyword_match_rate": 0.3333333333333333,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.6888888888888889,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "华北地区卖了多少",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "1e724414-390d-4559-a74c-d61d2ba3704f",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "华北",
+      "销售",
+      "数据"
+    ],
+    "keyword_match_rate": 0.3333333333333333,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "电子产品的销售情况",
+    "answer": "SQL查询成功，返回 11 行数据，但发现异常：数据范围异常：最大值120与最小值1差距过大",
+    "success": true,
+    "metadata": {
+      "session_id": "6397f4d4-b58e-4042-b883-b777f7a9afc6",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "电子",
+      "产品",
+      "销售"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.6739130434782609,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "配件的销售情况",
+    "answer": "抱歉，我无法理解这个问题。错误: 无法解析JSON: [\n    {\"step_id\": 1, \"tool\": \"sql_query\", \"args\": {\"sql\": \"SELECT * FROM sales WHERE category = '配件'",
+    "success": true,
+    "metadata": {
+      "session_id": "aac1bacb-ec89-4034-a34c-6d6b6a83d2b9",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "配件",
+      "销售",
+      "数据"
+    ],
+    "keyword_match_rate": 0.3333333333333333,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.14960629921259844,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "iPhone 15的销售额",
+    "answer": "SQL查询失败: (psycopg2.errors.UndefinedColumn) column \"product_name\" does not exist\nLINE 1: SELECT * FROM sales WHERE product_name = 'iPhone 15';\n                                  ^\n\n[SQL: SELECT * FROM sales WHERE product_name = 'iPhone 15';]\n(Background on this error at: https://sqlalche.me/e/14/f405)",
+    "success": true,
+    "metadata": {
+      "session_id": "efecb43b-da36-49c0-b8f3-a68e4ced25a7",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "iPhone",
+      "15",
+      "销售"
+    ],
+    "keyword_match_rate": 0.6666666666666666,
+    "quality": {
+      "length_score": 0.8,
+      "chinese_ratio": 0.013333333333333334,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "MacBook Pro的销售额",
+    "answer": "SQL查询成功，返回 4 行数据 (已自动修复)",
+    "success": true,
+    "metadata": {
+      "session_id": "0a3b02d3-7ed7-4deb-afc6-31f6b26c8461",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "MacBook",
+      "Pro",
+      "销售"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5833333333333334,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "AirPods Pro的销售额",
+    "answer": "SQL查询失败: (psycopg2.errors.UndefinedColumn) column \"product_name\" does not exist\nLINE 1: SELECT * FROM sales WHERE product_name = 'AirPods Pro'\n                                  ^\n\n[SQL: SELECT * FROM sales WHERE product_name = 'AirPods Pro']\n(Background on this error at: https://sqlalche.me/e/14/f405)",
+    "success": true,
+    "metadata": {
+      "session_id": "b6361748-731b-4066-8d1a-3f04275fb7bc",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "AirPods",
+      "Pro",
+      "销售"
+    ],
+    "keyword_match_rate": 0.6666666666666666,
+    "quality": {
+      "length_score": 0.8,
+      "chinese_ratio": 0.013245033112582781,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "7月份的销售数据",
+    "answer": "SQL查询成功，返回 0 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "3c924b9f-2a22-4e93-b70d-53005b6e1f64",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "7月",
+      "销售",
+      "数据"
+    ],
+    "keyword_match_rate": 0.3333333333333333,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "8月份的销售数据",
+    "answer": "SQL查询成功，返回 4 行数据 (已自动修复)",
+    "success": true,
+    "metadata": {
+      "session_id": "ff33d631-765d-44bf-aaf3-bf2c7326d043",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "8月",
+      "销售",
+      "数据"
+    ],
+    "keyword_match_rate": 0.3333333333333333,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5833333333333334,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "9月份的销售数据",
+    "answer": "SQL查询成功，返回 0 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "4f36e6fe-f966-47a7-af90-9f9ccbd94123",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "9月",
+      "销售",
+      "数据"
+    ],
+    "keyword_match_rate": 0.3333333333333333,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "销售额最高的产品",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "ecee47a0-7b27-4c35-a2d4-082554edc1ec",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "最高",
+      "产品",
+      "销售"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "销售额最低的产品",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "9923cf33-f3d3-4943-ae53-c8bfa87c8e16",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "最低",
+      "产品",
+      "销售"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "各品类销售额对比",
+    "answer": "SQL查询成功，返回 2 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "e51b033a-c559-4e25-8d81-a57ca8a89c21",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "品类",
+      "销售",
+      "对比"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "各区域销售额对比",
+    "answer": "SQL查询成功，返回 3 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "1af8b6f3-5fea-47c3-988c-bafdfc0752cd",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "区域",
+      "销售",
+      "对比"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "销量趋势分析",
+    "answer": "抱歉，我无法理解这个问题。错误: 无法解析JSON: [\n    {\"step_id\": 1, \"tool\": \"sql_query\", \"args\": {\"sql\": \"SELECT * FROM sales ORDER BY sale_date\"},",
+    "success": true,
+    "metadata": {
+      "session_id": "bcc2293c-52a4-4267-b381-a5b3e6699ffc",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "销量",
+      "趋势",
+      "分析"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.13385826771653545,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "帮我分析一下各产品的销售表现",
+    "answer": "抱歉，我无法理解这个问题。错误: 无法解析JSON: [\n    {\"step_id\": 1, \"tool\": \"sql_query\", \"args\": {\"sql\": \"SELECT product_id, SUM(sales_amount) AS t",
+    "success": true,
+    "metadata": {
+      "session_id": "683233b1-1603-4fa5-a2a5-af1874176e05",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "产品",
+      "销售",
+      "分析"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.13385826771653545,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "哪个区域销售最好",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "96adff0b-d937-40f8-b3e0-37a2f615b034",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "区域",
+      "销售",
+      "最好"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "哪个品类销售最好",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "c06c0959-23c5-48aa-9060-0713628a8d12",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "品类",
+      "销售",
+      "最好"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "Q3整体销售情况",
+    "answer": "抱歉，我无法理解这个问题。错误: 无法解析JSON: [\n    {\"step_id\": 1, \"tool\": \"sql_query\", \"args\": {\"sql\": \"SELECT * FROM sales\"}, \"status\": \"pending",
+    "success": true,
+    "metadata": {
+      "session_id": "1a7de514-4c29-42ab-8a5a-357357acb254",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "Q3",
+      "销售",
+      "情况"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.13385826771653545,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "是否有销售异常",
+    "answer": "SQL查询成功，返回 15 行数据，但发现异常：数据范围异常：最大值250与最小值1差距过大",
+    "success": true,
+    "metadata": {
+      "session_id": "c64aae73-b21a-4f37-9840-0a0114ca4a6f",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "异常",
+      "销售",
+      "数据"
+    ],
+    "keyword_match_rate": 0.6666666666666666,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.6739130434782609,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "你好",
+    "answer": "你好！我是 Aurora-Insight 数据分析智能体。",
+    "success": true,
+    "metadata": {
+      "session_id": "b1c506cb-5628-4eeb-88fe-d6a2626ea185",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "你好",
+      "Aurora"
+    ],
+    "keyword_match_rate": 1.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.3793103448275862,
+      "has_number": 0.0
+    }
+  },
+  {
+    "query": "什么是数据分析",
+    "answer": "数据分析是指通过收集、清洗、处理、分析和解释数据，以提取有价值信息、支持决策和发现规律的过程。它通常包括描述性分析、诊断性分析、预测性分析和规范性分析等类型，涉及统计学、机器学习、数据可视化等技术。",
+    "success": true,
+    "metadata": {
+      "session_id": "7d4fc906-e57c-487e-b114-8352d85551fd",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "数据",
+      "分析",
+      "过程"
+    ],
+    "keyword_match_rate": 1.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.8787878787878788,
+      "has_number": 0.0
+    }
+  },
+  {
+    "query": "介绍一下自己",
+    "answer": "你好！我是 Aurora-Insight 数据分析智能体。",
+    "success": true,
+    "metadata": {
+      "session_id": "d638bfc9-10a2-419d-b844-791eae327855",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "Aurora",
+      "智能",
+      "体"
+    ],
+    "keyword_match_rate": 1.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.3793103448275862,
+      "has_number": 0.0
+    }
+  },
+  {
+    "query": "你能做什么",
+    "answer": "我是一个数据分析任务规划专家，可以协助您完成以下任务：1. 使用SQL查询从数据库中提取数据；2. 使用Pandas进行数据清洗、转换和统计分析；3. 生成各种图表（如柱状图、折线图等）进行可视化；4. 提供最终的分析结论。请告诉我您具体需要分析什么数据或解决什么问题，我将为您制定详细的执行计划。",
+    "success": true,
+    "metadata": {
+      "session_id": "25ffd63d-2f93-42cc-8642-4fc851f2885a",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "数据",
+      "分析",
+      "帮助"
+    ],
+    "keyword_match_rate": 0.6666666666666666,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.7785234899328859,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "谢谢",
+    "answer": "不客气！如果您有具体的数据分析需求，请随时告诉我，我会为您制定详细的执行计划。",
+    "success": true,
+    "metadata": {
+      "session_id": "9ce24f32-d88b-4b0f-9134-41a038db5d4c",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "不客气",
+      "欢迎",
+      "谢谢"
+    ],
+    "keyword_match_rate": 0.3333333333333333,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.8974358974358975,
+      "has_number": 0.0
+    }
+  }
+]

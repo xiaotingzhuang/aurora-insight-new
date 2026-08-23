@@ -1,0 +1,163 @@
+[
+  {
+    "query": "帮我分析一下销售数据",
+    "answer": "SQL查询成功，返回 15 行数据，但发现异常：数据范围异常：最大值250与最小值1差距过大",
+    "success": true,
+    "metadata": {
+      "session_id": "7d18800c-988e-4e09-a900-b269a601e8c3",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "销售",
+      "数据",
+      "查询",
+      "SQL"
+    ],
+    "keyword_match_rate": 0.75,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.6739130434782609,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "哪个产品销售最好",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "b30fb9fa-0c16-4c15-8615-bdf829807cb9",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "产品",
+      "销售",
+      "最高",
+      "好"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "哪个产品销售最差",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "a791fc34-8b91-4447-bfd9-14897dc037d1",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "产品",
+      "销售",
+      "最低",
+      "差"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "Q3销售额是多少",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "90cd0de8-bb94-4720-a2f5-5392d2ae11f4",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "Q3",
+      "销售",
+      "额",
+      "3"
+    ],
+    "keyword_match_rate": 0.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "华东地区卖了多少",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "0c2ad87c-0ec4-4743-af99-254f28aca538",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "华东",
+      "销售",
+      "数据",
+      "额"
+    ],
+    "keyword_match_rate": 0.25,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "华南地区卖了多少",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "50d2244f-b114-47b6-8754-06ab365501be",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "华南",
+      "销售",
+      "数据",
+      "额"
+    ],
+    "keyword_match_rate": 0.25,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "华北地区卖了多少",
+    "answer": "SQL查询成功，返回 1 行数据",
+    "success": true,
+    "metadata": {
+      "session_id": "742d0c20-1597-4e5a-8199-0739e350855e",
+      "steps": 1,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "华北",
+      "销售",
+      "数据",
+      "额"
+    ],
+    "keyword_match_rate": 0.25,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  }
+]

@@ -1,0 +1,163 @@
+[
+  {
+    "query": "帮我分析一下销售数据",
+    "answer": "根据销售数据，AirPods Pro销量最高（825件），iPhone 15次之（540件），MacBook Pro为345件，iPad Pro最低（55件），总销量为1765件。",
+    "success": true,
+    "metadata": {
+      "session_id": "f1214947-8728-47e9-acbd-1f6a8df57763",
+      "steps": 3,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "销售",
+      "数据",
+      "查询",
+      "SQL"
+    ],
+    "keyword_match_rate": 0.5,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.26666666666666666,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "哪个产品销售最好",
+    "answer": "AirPods Pro销量最好，总销量为825件。",
+    "success": true,
+    "metadata": {
+      "session_id": "d2a11d5e-230b-4993-9ced-ebe5c2059ab2",
+      "steps": 3,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "产品",
+      "销售",
+      "最高",
+      "好"
+    ],
+    "keyword_match_rate": 0.25,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.36,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "哪个产品销售最差",
+    "answer": "iPad Pro销量最差，总销量为55件。",
+    "success": true,
+    "metadata": {
+      "session_id": "2a6940a4-d2ee-4749-880f-2aa132a60420",
+      "steps": 3,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "产品",
+      "销售",
+      "最低",
+      "差"
+    ],
+    "keyword_match_rate": 0.25,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.42857142857142855,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "Q3销售额是多少",
+    "answer": "Q3销售额为605,000元。",
+    "success": true,
+    "metadata": {
+      "session_id": "dbcd5b30-4d2d-4e93-b407-876b225515f4",
+      "steps": 3,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "Q3",
+      "销售",
+      "额",
+      "3"
+    ],
+    "keyword_match_rate": 1.0,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.3333333333333333,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "华东地区卖了多少",
+    "answer": "华东地区销售额合计为370,000元。",
+    "success": true,
+    "metadata": {
+      "session_id": "52849c0f-31bd-4c6d-8196-9033d4e0d40e",
+      "steps": 3,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "华东",
+      "销售",
+      "数据",
+      "额"
+    ],
+    "keyword_match_rate": 0.75,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5789473684210527,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "华南地区卖了多少",
+    "answer": "华南地区销售额为85,000元。",
+    "success": true,
+    "metadata": {
+      "session_id": "3aed668c-596c-4a18-9b5b-8b2e743c0e2b",
+      "steps": 3,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "华南",
+      "销售",
+      "数据",
+      "额"
+    ],
+    "keyword_match_rate": 0.75,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5625,
+      "has_number": 1.0
+    }
+  },
+  {
+    "query": "华北地区卖了多少",
+    "answer": "华北地区销售额为150,000元。",
+    "success": true,
+    "metadata": {
+      "session_id": "d2f0d025-0a1f-45fd-b350-c4aea6bc8cd7",
+      "steps": 3,
+      "replans": 0,
+      "reflections": 0
+    },
+    "expected_keywords": [
+      "华北",
+      "销售",
+      "数据",
+      "额"
+    ],
+    "keyword_match_rate": 0.75,
+    "quality": {
+      "length_score": 1.0,
+      "chinese_ratio": 0.5294117647058824,
+      "has_number": 1.0
+    }
+  }
+]
